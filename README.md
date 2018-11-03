@@ -22,7 +22,7 @@ $ scp -r /{folder to copy} sshd@{MyCloud_s IP address}:/{the target location}
 
 * The mouse pointer stuck at the top of the screen Ubuntu 14.04.
 
-'''
+```
 
 #Check the input list
 $> xinput list 
@@ -34,11 +34,11 @@ $> xinpit enable <ID>
 * Restart the computer
 $> sudo shutdown -r now
 
-'''
+```
 
 #### Moving the windows in Ubuntu 
 
-'''
+```
 
 * Make sure that you have the compizconfig-settings-manager
 * Search for Grid
@@ -51,4 +51,4 @@ e.g.,
 
 This shortcuts will help you to move the window to the upper half
 of the screen and lower half of the screen.
-'''
+```
