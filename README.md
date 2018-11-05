@@ -52,3 +52,15 @@ e.g.,
 This shortcuts will help you to move the window to the upper half
 of the screen and lower half of the screen.
 ```
+#### Installation of Electron
+* In order to install latest version of nodejs. Use the following command.
+```
+Nodejs:
+$> curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+$> node -v
+The installation of npm and 
+#> npm install npm@latest -g
+#> npm install electron -g --save --unsafe-perm=true
+
+
+```
