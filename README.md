@@ -1,3 +1,16 @@
+#### How to use Eagle and export .brd to 3D CAD file
+- The default installation moves the files into /opt/eagle-{version}. 
+- Run ./eagle (if the ownership was on root run with sudo)
+- Go online on Control Panel of Eagle.
+- Open .brd file that you want to convert in 3D. 
+  - Please remark if you don't have the 3D components, it will only convert the
+  foot prints.
+- In the board window, go to File > Export > Step. It will start to generate 
+3D model. Once the generation of the model completed, you will see the file
+on Control Panel main window under "Recently Generated 3D Files."
+- Click that file to download. 
+- Use it with your favorite CAD software (e.g. FreeCAD).
+
 #### Copy the files from the PC to MyCloud via ssh
 
 1- ssh service should be enabled first. Default user name is sshd.
