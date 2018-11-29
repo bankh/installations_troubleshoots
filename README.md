@@ -1,3 +1,19 @@
+#### Installation of FreeCAD for Ubuntu 16.04
+
+Follow the procedure at https://www.freecadweb.org/wiki/CompileOnUnix#Debian_and_Ubuntu
+- Installation:
+```
+$ git clone https://github.com/FreeCAD/FreeCAD.git
+$ cd FreeCad
+$ mkdir freecad-build
+$ cd freecad-build
+$ cmake -DFREECAD_USE_EXTERNAL_PIVY=1 -DCMAKE_BUILD_TYPE=Release make -j8 .. 
+# Note: to speed up build use all CPU cores: make -j$(nproc). The one above is for octacore
+$ make
+# Install the global structure
+$ sudo make install
+```
+
 #### How to use Eagle and export .brd to 3D CAD file
 - The default installation moves the files into /opt/eagle-{version}. 
 - Run ./eagle (if the ownership was on root run with sudo)
