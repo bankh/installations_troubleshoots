@@ -1,3 +1,24 @@
+#### Firmware Development Tools - Installation of Platform IO (Add to main guidelines)
+Platform IO is a framework which consists different types of controllers including ARM, AVR, RISC-5
+based or others x86 or x64 to name a few.It is a plugin which can be interfaced to Visual Studio
+Code.
+Once you installed that in Ubuntu StLink will result in an error. The board will be defined as a
+media device which one can upload firmware file from the compiled code. However, this approach
+is problematic for on-system debugging. Thereby, one needs to change the rule set in Ubuntu to
+be able to open the USB port. Otherwise the error looks like below:
+```
+Error: libusb_open() failed with LIBUSB_ERROR_ACCESS
+Error: no device found
+```
+The location of OpenOCD is a result of 
+$ locate openocd
+/usr/local/share/openocs/contrib/
+Copy 60-openocd.rules to /etc/udev/rules.d/ as a super user and reboot the system.
+$ sudo cp 60-openocv.rules /etc/udev/rules.d/
+$ sudo reboot
+
+Now you can build and upload the code as well as debug by using the framework's PIO debugger.
+
 #### Installation of FreeCAD for Ubuntu 16.04
 
 Follow the procedure at https://www.freecadweb.org/wiki/CompileOnUnix#Debian_and_Ubuntu
