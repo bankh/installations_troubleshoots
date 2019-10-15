@@ -1,6 +1,6 @@
 #### Ubuntu Core - Changing the WiFi Connection
-There are a few posts I've seen such as this (one)[https://askubuntu.com/questions/1015632/ubuntu-core-wifi-configuration-issue]
-The solution requires an ethernet connection to the wifi router from the Ubuntu Core device. Once you have IP address it will show the 
+There are a few posts I've seen such as this [one](https://askubuntu.com/questions/1015632/ubuntu-core-wifi-configuration-issue)
+The solution requires an ethernet connection to the wifi router from the Ubuntu Core device. Once you have IP address on the monitor you should see something like:
 ```
 ssh {user_name}@{IP} with some of the keys. 
 ```
