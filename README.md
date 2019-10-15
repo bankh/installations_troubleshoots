@@ -12,14 +12,14 @@ Then make sure that you are not in classic mode. Otherwise, the wifi changes wil
 ```
 $sudo console-config
 ```
-Follow the intuitive instructions to setup the Wifi. Some of the potential confusion would be for the static IP case and the following will help you. We assume that the computer is on 192.168 domain and this may change. To find out first try the following:
+Follow the intuitive instructions to setup the Wifi. Some of the potential confusion would be for the static IP case and the following will help you. We assume that the computer is on 192.168 domain and this may change based on the brand of the Wifi Router. To find out the network information, first try the following:
 ```
 $ ifconfig
 ```
-See the network properties and if the domain is 192.168.0.xx apply the following
+See the network features and if the domain is 192.168.0.xx apply the following
 ```
 SubNet: 192.168.0.0/24
-IP: 192.168.0.{Whatever_static_range_is_available_on_the_router}
+IP: 192.168.0.{Within_the_static_range_is_available_on_the_router}
 Gateway: 192.168.0.1
 ```
 Then restart your raspi and disconnect ethernet. You should see the new IP with the same way as
