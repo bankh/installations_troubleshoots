@@ -1,3 +1,33 @@
+#### Ubuntu Core - Changing the WiFi Connection
+There are a few posts I've seen such as this (one)[https://askubuntu.com/questions/1015632/ubuntu-core-wifi-configuration-issue]
+The solution requires an ethernet connection to the wifi router from the Ubuntu Core device. Once you have IP address it will show the 
+```
+ssh {user_name}@{IP} with some of the keys. 
+```
+I assume that your system has the necessary key files for ssh connection. Use the following command for connecting from the client to the ubuntu core installed device.
+```
+$ ssh {user_name}@{IP}
+```
+Then make sure that you are not in classic mode. Otherwise, the wifi changes will not work.
+```
+$sudo console-config
+```
+Follow the intuitive instructions to setup the Wifi. Some of the potential confusion would be for the static IP case and the following will help you. We assume that the computer is on 192.168 domain and this may change. To find out first try the following:
+```
+$ ifconfig
+```
+See the network properties and if the domain is 192.168.0.xx apply the following
+```
+SubNet: 192.168.0.0/24
+IP: 192.168.0.{Whatever_static_range_is_available_on_the_router}
+Gateway: 192.168.0.1
+```
+Then restart your raspi and disconnect ethernet. You should see the new IP with the same way as
+```
+ssh {user_name}@{NEW_IP}
+```
+You can connect as you connected earlier steps via ssh by using new IP -no need to renew the keys.
+
 #### Firmware Development Tools - Installation of Platform IO (Add to main guidelines)
 Platform IO is a framework which consists different types of controllers including ARM, AVR, RISC-5
 based or others x86 or x64 to name a few.It is a plugin which can be interfaced to Visual Studio
